@@ -1,1 +1,18 @@
+Projekt: Monitorowanie statusu wolnych adresów IP w firmie
 
+Celem projektu było stworzenie systemu monitorującego dostępność wolnych adresów IP w podsieciach firmowych, 
+zintegrowanego z narzędziem Zabbix. System pobiera dane z serwera DHCP, określając liczbę wolnych adresów IP, 
+i przesyła te informacje do Zabbix'a.
+
+Skrypt automatycznie gromadzi informacje o stanie wolnych adresów i przekazuje je do Zabbix'a, 
+gdzie dane są wizualizowane na dashboardzie w formie kolorowych statusów, zgodnie z ustalonymi progami:
+
+Zielony (więcej niż 20 wolnych adresów) – brak zagrożeń.
+Pomarańczowy (10-20 adresów) – umiarkowane ryzyko.
+Czerwony (mniej niż 10 adresów) – krytyczny stan.
+
+Dodatkowo, system automatycznie generuje alerty przypisane do każdego z tych tresholdów. Gdy liczba wolnych adresów spadnie do określonego poziomu, 
+alerty te pojawiają się na drugim dashboardzie, informując o potencjalnym problemie. W momencie przekroczenia progu (np. poniżej 10 adresów), 
+system wysyła automatyczne powiadomienia e-mail, co pozwala na szybką reakcję zespołu IT.
+
+Projekt znacząco poprawił monitorowanie zasobów IP w firmie, automatyzując procesy zarządzania adresacją i zwiększając bezpieczeństwo sieci.
